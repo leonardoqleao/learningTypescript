@@ -1,5 +1,5 @@
-# DEV <br />
-## Esse é um dos meus primeiros repositorios,  nao sei bem como está organizado aqui coisas aqui, mas é bem provavel que não esteja nada organizado.
+# TypeScript <br />
+## Esse é um dos meus primeiros repositorios de TypeScript.
 <br /><br />
 <br /><br /><br /><br />
 ## Languages and Tools:
