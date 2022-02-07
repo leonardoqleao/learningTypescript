@@ -1,7 +1,6 @@
 # DEV <br />
 ## Esse é um dos meus primeiros repositorios,  nao sei bem como está organizado aqui coisas aqui, mas é bem provavel que não esteja nada organizado.
 <br /><br />
-# Diferente de outros repositórios, esse tem de tudo um pouco!
 <br /><br /><br /><br />
 ## Languages and Tools:
 | <img align="center" alt="Leonardo-NodeJs" height="30" width="30" src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" /> | <img align="center" alt="Leonardo-JavaScript" height="30" width="30" src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png" /> | <img align="center" alt="Leonardo-TypeScript" height="30" width="30" src="https://seeklogo.com/images/T/typescript-logo-B29A3F462D-seeklogo.com.png"> | 
