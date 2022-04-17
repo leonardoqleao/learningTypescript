@@ -1,5 +1,5 @@
 {
-  "name": "a-simple-test-in-ts",
+  "name": "typescript-node-api",
   "version": "1.0.0",
   "description": "não sei dizer muito bem, mas isso aqui vai conter os resultado do que eu aprender em TS",
   "main": "index.ts",
@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "Leonardo Queiros Leao",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardoqleao/typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leonardoqleao/typescript/issues"
+  },
+  "homepage": "https://github.com/leonardoqleao/typescript#readme"
 }
