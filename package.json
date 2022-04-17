@@ -4,7 +4,7 @@
   "description": "não sei dizer muito bem, mas isso aqui vai conter os resultado do que eu aprender em TS",
   "main": "index.ts",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests",
     "prepare": "husky install"
   },
