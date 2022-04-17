@@ -4,7 +4,9 @@
   "description": "não sei dizer muito bem, mas isso aqui vai conter os resultado do que eu aprender em TS",
   "main": "index.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:staged": "jest",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Leonardo Queiros Leao",
@@ -17,17 +19,21 @@
     "url": "https://github.com/leonardoqleao/typescript/issues"
   },
   "homepage": "https://github.com/leonardoqleao/typescript#readme",
-  "dependencies": {
-    "ts-standard": "^11.0.0"
-  },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.0.1",
     "@types/node": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
     "git-commit-msg-linter": "^4.1.1",
     "husky": "^7.0.4",
-    "jest": "^27.5.1",
+    "jest": "^27.2.0",
     "lint-staged": "^12.3.8",
-    "ts-jest": "^27.1.4",
-    "typescript": "^4.6.3"
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
   }
 }
