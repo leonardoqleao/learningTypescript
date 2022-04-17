@@ -1,0 +1,6 @@
+{
+    "extends": "ts-standard",
+    "parserOptions": {
+        "project": "/tsconfig.json"
+    }
+}
