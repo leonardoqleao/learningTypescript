@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/leonardoqleao/typescript/issues"
   },
-  "homepage": "https://github.com/leonardoqleao/typescript#readme"
+  "homepage": "https://github.com/leonardoqleao/typescript#readme",
+  "dependencies": {
+    "git-commit-msg-linter": "^4.1.1"
+  }
 }
