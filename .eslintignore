@@ -1,0 +1,11 @@
+node_modules/
+.history/
+dist/
+*.tsbuildinfo
+# CMD
+gitc.cmd
+.history/
+
+# DB
+Data/
+dist/
