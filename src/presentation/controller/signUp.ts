@@ -4,7 +4,6 @@ import { badResponse } from '../helpers/http-helpers'
 import { Controller } from '../protocols/controller'
 
 export class SignUpController implements Controller {
-  HttpResponse
   handle (httpRequest: HttpRequest): HttpResponse {
     // Verificação dos campos faltando, caso algum campo falte, o singup.spec vai acusar.
     const requireField = ['name', 'email', 'password', 'passwordConfirmation']
