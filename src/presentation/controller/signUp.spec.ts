@@ -1,7 +1,5 @@
 import { SignUpController } from './signUp'
-import { MissingParamError } from '../erros/missingParamErro'
-import { InvalidParamError } from '../erros/invalidParamErro'
-import { ServerError } from '../erros/serverErro'
+import { MissingParamError, InvalidParamError, ServerError } from '../erros'
 import { EmailValidator } from '../protocols/invalidEmail'
 import { SutTypes } from '../protocols/sutTypes'
 
