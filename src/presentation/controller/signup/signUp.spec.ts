@@ -161,4 +161,27 @@ describe('SingUp Controller', () => {
       password: 'any_password'
     })
   })
+
+  test('Should return 200 if valid date is provided', () => {
+    const { sut } = makeSut()
+    /* Na cosntante assima, o emailValidatorStub vem como true, e aqui é esperado false, por esse motivo, eu vou alterar
+    esse valor. */
+    // Aqui eu estou alterando o valor do mock, de true para false, onde somente aqui é preciso que ele seja false.
+    const httpRequest = {
+      body: {
+        name: 'valid_name',
+        email: 'valid_email@email.com',
+        password: 'valid_password',
+        passwordConfirmation: 'valid_password'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(200)
+    expect(httpResponse.body).toEqual({
+      id: 'valid_id',
+      name: 'valid_name',
+      email: 'valid_email@email.com',
+      password: 'valid_password'
+    })
+  })
 })
