@@ -1,6 +1,5 @@
-import { SignUpController } from './signUp'
 import { MissingParamError, InvalidParamError, ServerError } from '../erros'
-import { makeEmailValidatorWhithError, makeSut } from '../helpers/factory-helpers'
+import { makeSut } from '../helpers/factory-helpers'
 
 describe('SingUp Controller', () => {
   test('Should return 400 if no nome is provided', () => {
@@ -94,8 +93,10 @@ describe('SingUp Controller', () => {
   })
 
   test('Should return 500 if EmailValidator throws', () => {
-    const emailAvalidatorStub = makeEmailValidatorWhithError()
-    const sut = new SignUpController(emailAvalidatorStub)
+    const { sut, emailAvalidatorStub } = makeSut()
+    jest.spyOn(emailAvalidatorStub, 'isValid').mockImplementationOnce(() => {
+      throw new Error()
+    })
     const httpRequest = {
       body: {
         name: 'any_name',
