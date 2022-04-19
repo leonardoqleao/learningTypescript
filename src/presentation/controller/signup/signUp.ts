@@ -11,7 +11,7 @@ export class SignUpController implements Controller {
     this.addAccount = addAccount
   }
 
-  handle (httpRequest: HttpRequest): HttpResponse {
+  async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     try {
       // Verificação dos campos faltando, caso algum campo falte, o singup.spec vai acusar.
       const requireField = ['name', 'email', 'password', 'passwordConfirmation']
@@ -28,7 +28,7 @@ export class SignUpController implements Controller {
       if (!isValid) {
         return badRquest(new InvalidParamError('invalid_email'))
       }
-      const account = this.addAccount.add({
+      const account = await this.addAccount.add({
         name,
         email,
         password
