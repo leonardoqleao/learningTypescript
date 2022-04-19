@@ -1,3 +1,4 @@
 export interface EmailValidator {
-  isValid: (email: string) => boolean
+  // eslint-disable-next-line @typescript-eslint/method-signature-style
+  isValid (email: string): boolean
 }

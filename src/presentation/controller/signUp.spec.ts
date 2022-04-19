@@ -1,34 +1,6 @@
 import { SignUpController } from './signUp'
 import { MissingParamError, InvalidParamError, ServerError } from '../erros'
-import { EmailValidator, SutTypes } from '../protocols'
-
-const makeEmailValidator = (): EmailValidator => {
-  class EmailValidatorStub implements EmailValidator {
-    isValid (email: string): boolean {
-      return true
-    }
-  }
-  return new EmailValidatorStub()
-}
-
-const makeEmailValidatorWhithError = (): EmailValidator => {
-  class EmailValidatorStub implements EmailValidator {
-    isValid (email: string): boolean {
-      throw new Error()
-    }
-  }
-  return new EmailValidatorStub()
-}
-
-const makeSut = (): SutTypes => {
-  const emailAvalidatorStub = makeEmailValidator()
-  const sut = new SignUpController(emailAvalidatorStub)
-
-  return {
-    sut,
-    emailAvalidatorStub
-  }
-}
+import { makeEmailValidatorWhithError, makeSut } from '../helpers/factory-helpers'
 
 describe('SingUp Controller', () => {
   test('Should return 400 if no nome is provided', () => {
