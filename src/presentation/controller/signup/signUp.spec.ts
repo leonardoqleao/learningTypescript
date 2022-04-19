@@ -1,5 +1,5 @@
-import { MissingParamError, InvalidParamError, ServerError } from '../erros'
-import { makeSut } from '../helpers/factory-helpers'
+import { MissingParamError, InvalidParamError, ServerError } from '../../erros'
+import { makeSut } from './signUpTestFactory'
 
 describe('SingUp Controller', () => {
   test('Should return 400 if no nome is provided', () => {

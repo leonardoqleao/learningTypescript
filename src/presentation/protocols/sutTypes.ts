@@ -1,5 +1,5 @@
-import { SignUpController } from '../controller/signUp'
-import { EmailValidator } from './'
+import { SignUpController } from '../controller/signup/signUp'
+import { EmailValidator } from './invalidEmail'
 import { AddAccount } from '@/domain/usecases/add-account'
 
 export interface SutTypes {
