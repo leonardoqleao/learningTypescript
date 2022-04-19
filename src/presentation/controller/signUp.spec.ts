@@ -58,6 +58,21 @@ describe('SingUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
 
+  test('Should return 400 if password confirmation fails', () => {
+    const { sut } = makeSut()
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'any_email@email.com',
+        password: 'any_password',
+        passwordConfirmation: 'invalid_passwordConfirmation'
+      }
+    }
+    const httpResponse = sut.handle(httpRequest)
+    expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new InvalidParamError('invalid_passwordConfirmation'))
+  })
+
   test('Should return 400 if an invalid email is provided', () => {
     const { sut, emailAvalidatorStub } = makeSut()
     /* Na cosntante assima, o emailValidatorStub vem como true, e aqui é esperado false, por esse motivo, eu vou alterar
@@ -74,7 +89,7 @@ describe('SingUp Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new InvalidParamError('email'))
+    expect(httpResponse.body).toEqual(new InvalidParamError('invalid_email'))
   })
 
   test('Should call EmailValidator with correct email', () => {
