@@ -34,6 +34,7 @@ describe('SingUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('name'))
   })
+
   test('Should return 400 if no email is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -47,6 +48,7 @@ describe('SingUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
+
   test('Should return 400 if no password is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -60,6 +62,7 @@ describe('SingUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('password'))
   })
+
   test('Should return 400 if no passwordConfirmation is provided', () => {
     const { sut } = makeSut()
     const httpRequest = {
@@ -73,6 +76,7 @@ describe('SingUp Controller', () => {
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('passwordConfirmation'))
   })
+
   test('Should return 400 if an invalid email is provided', () => {
     const { sut, emailAvalidatorStub } = makeSut()
     /* Na cosntante assima, o emailValidatorStub vem como true, e aqui é esperado false, por esse motivo, eu vou alterar
@@ -90,5 +94,20 @@ describe('SingUp Controller', () => {
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new InvalidParamError('email'))
+  })
+
+  test('Should call EmailValidator with correct email', () => {
+    const { sut, emailAvalidatorStub } = makeSut()
+    const isValidSpy = jest.spyOn(emailAvalidatorStub, 'isValid')
+    const httpRequest = {
+      body: {
+        name: 'any_name',
+        email: 'invalid_email@email.com',
+        password: 'any_password',
+        passwordConfirmation: 'any_password'
+      }
+    }
+    sut.handle(httpRequest)
+    expect(isValidSpy).toHaveBeenCalledWith(httpRequest.body.email)
   })
 })
