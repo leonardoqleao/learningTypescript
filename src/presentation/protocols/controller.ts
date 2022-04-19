@@ -1,4 +1,4 @@
-import { HttpRequest, HttpResponse } from './http'
+import { HttpRequest, HttpResponse } from './'
 
 export interface Controller {
   // eslint-disable-next-line @typescript-eslint/method-signature-style

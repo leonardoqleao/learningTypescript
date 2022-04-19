@@ -1,7 +1,6 @@
 import { SignUpController } from './signUp'
 import { MissingParamError, InvalidParamError, ServerError } from '../erros'
-import { EmailValidator } from '../protocols/invalidEmail'
-import { SutTypes } from '../protocols/sutTypes'
+import { EmailValidator, SutTypes } from '../protocols'
 
 const makeSut = (): SutTypes => {
   class EmailValidatorStub implements EmailValidator {
