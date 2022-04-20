@@ -1,5 +1,5 @@
 import { SignUpController } from './signUp'
-import { EmailValidator, SutTypes, AccountModel, AddAccountModel, AddAccount } from './singup-protocols'
+import { EmailValidator, SutTypes, AccountModel, AddAccountModel, AddAccount } from './singupProtocols'
 
 export const makeEmailValidator = (): EmailValidator => {
   class EmailValidatorStub implements EmailValidator {
