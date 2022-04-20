@@ -1,7 +1,7 @@
 {
   "name": "typescript-node-api",
   "version": "1.0.0",
-  "description": "não sei dizer muito bem, mas isso aqui vai conter os resultado do que eu aprender em TS",
+  "description": "Um projeto simples, estou colocando em prática: TDD, DDD, SOLID, CleanArchiteture além do NodeJS com TypeScript",
   "main": "index.ts",
   "scripts": {
     "test": "jest --passWithNoTests  --silent --noStackTrace --runInBand",
