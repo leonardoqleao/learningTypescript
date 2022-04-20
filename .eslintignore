@@ -9,3 +9,4 @@ gitc.cmd
 # DB
 Data/
 dist/
+coverage/
