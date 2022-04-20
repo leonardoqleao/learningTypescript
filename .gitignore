@@ -108,5 +108,4 @@ gitc.cmd
 .history/
 
 # DB
-Data/
 dist/

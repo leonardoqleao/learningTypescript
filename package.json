@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest --passWithNoTests  --silent --noStackTrace --runInBand",
-    "test:vergose": "jest --passWithNoTests --runInBand",
+    "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jestUnitConfig.js",
     "test:integration": "npm test -- --watch -c jestIntegrationConfig.js",
     "test:staged": "npm test -- --findRelatedTests",
